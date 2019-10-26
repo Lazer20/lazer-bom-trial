@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="logo.png">
+<title>Student Report System</title>
+<style>
+span{
+background: #4CAF50;
+color: #f2f2f2;
+padding: 40px 20px;
+border-radius: 10px;
+box-shadow: 0px 0px 8px rgba(128,128,128,.8);
+text-transform: uppercase;
+font-weight: bold;
+margin-top: 30px;
+}
+</style>
+</head>
+<body>
+<span id="par"></span>
+<script type="text/javascript">
+var mark,a;
+a = prompt("Enter Your Marks:", "");
+mark = new Number(a);
+if (mark==50){
+document.getElementById('par').innerHTML = "Your marks are: &nbsp;" + mark + " % " + " And Your Grade Is 'C'";
+}
+
+else if (mark>50 && mark<=70){
+document.getElementById('par').innerHTML = "Your marks are: &nbsp;" + mark + " % " + " And Your Grade Is 'B'";
+}
+
+else if (mark>70 && mark<=80){
+document.getElementById('par').innerHTML = "Your marks are: &nbsp;" + mark + " % " + " And Your Grade Is 'A'";
+}
+
+else if (mark>80 && mark<=100){
+document.getElementById('par').innerHTML = "Your marks are: &nbsp;" + mark + " % " + " And Your Grade Is 'A+'";
+}
+
+else{
+document.getElementById('par').innerHTML = "Your marks are: &nbsp;" + mark + " % " + " And Your Grade Is 'F'";
+}
+</script>
+</body>
+</html>

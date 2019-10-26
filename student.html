@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="logo.png">
+<title>Student Report System</title>
+<style>
+*{
+padding: 0;
+margin: 0;
+font-family: Titillium Web;
+box-sizing: border-box;
+}
+body{
+background: #f2f2f2;
+}
+
+.main-div{
+width: 60%;
+margin: 2em auto;
+height: 1060px;
+box-shadow: 0px 0px 18px rgba(128,128,128,0.8);
+}
+
+h1{
+text-align: center;
+text-transform: uppercase;
+}
+
+p{
+color: gray;
+font-style: italic;
+margin: 10px 20px;
+}
+
+button{
+border: none;
+outline: none;
+width: 150px;
+height: 40px;
+background: #33ccff;
+text-transform: uppercase;
+font-weight: bold;
+margin: 10px 250px;
+box-shadow: 4px 4px 8px rgba(128,128,128,0.8);
+transition: all 0.5s;
+font-size: 15px;
+color: #f2f2f2;
+cursor: pointer;
+}
+
+#results{
+width: 550px;
+margin: 20px auto;
+height: 840px;
+background: #ccc;
+border-radius: 35px 5px 35px 5px;
+box-shadow: 0px 0px 10px rgba(128,128,128,0.8);
+}
+
+.container{
+width: 90%;
+margin: auto;
+}
+
+h3{
+margin: 20px 0px;
+border-width: 5px;
+border-style: solid;
+border-color: Transparent Transparent #111 Transparent;
+text-align: center;
+}
+
+h4{
+text-transform: uppercase;
+margin-left: 5px;
+}
+
+p.ans{
+margin-left: 15px;
+text-transform: capitalize;
+}
+
+table{
+margin: 20px 10px;
+}
+
+p.sign{
+font-family: Mistral;
+color: #111;
+}
+</style>
+</head>
+<body>
+<div class="main-div">
+    <h1>Student Report System</h1>
+	<p>" This Is a web-based System That works as "STUDENT SCHOOL REPORT" 
+	it only Requires to enter your valid marks, names, combination and Gender To Recieve Your Report. "</p>
+    <button onclick="myFunct()">
+       Get Report
+    </button>
+	
+	<div id="results">
+	<div class="container">
+	<h3>YOUR RESULTS:</h3>
+	<!-- <h4>Names:</h4> -->
+	<!-- <p class="ans">Gideon</p>	 -->
+	<!-- <h4>Names:</h4> -->
+	<!-- <p class="ans">Gideon</p>	 -->
+	
+	<!-- <h4>Gender:</h4> -->
+	<!-- <p class="ans">Male</p>	 -->
+	
+	<!-- <h4>Combination:</h4> -->
+	<!-- <p class="ans">Computer Science</p>	 -->
+	
+	<!-- <h4>Marks:</h4> -->
+			    <!-- <p>ENGLISH:&nbsp;&nbsp;&nbsp;56%</p>		    -->
+			    <!-- <p>MATHS:&nbsp;&nbsp;&nbsp;56%</p> -->
+			    <!-- <p>COMPUTER SCIENCE:&nbsp;&nbsp;&nbsp;56%</p> -->
+			    <!-- <p>FRENCH:&nbsp;&nbsp;&nbsp;56%</p> -->
+			    <!-- <p>MUSIC:&nbsp;&nbsp;&nbsp;56%</p> -->
+	    <!-- <h4>Average:</h4> -->
+		<!-- <p class="ans">87%</p>	     -->
+		<!-- <h4>VERDICT OF JURY:</h4> -->
+		<!-- <p class="ans">EXCELLENT</p>		 -->
+		<!-- <h4>DONE AT:</h4> -->
+		<!-- <p class="ans">Wed May 15 2019 20:24:48 GMT+0200 (South Africa Standard Time)</p> -->
+		<!-- <h4>SCHOOL PRINCIPAL</h4> -->
+		<!-- <p class="ans">Dr JOHN DOE</p> -->
+		<!-- <p class="sign">Jodoehn123</p> -->
+	</div>
+	</div>
+</div>
+<script type="text/javascript">
+function myFunct(){
+var fnam,lnam,gen,comb,mark,mtc,cs,fr,msc,avg,dat,a,b,c,d,e;
+<!-- fnam = prompt("Enter Your FirstName:", ""); -->
+<!-- lnam = prompt("Enter Your LastName:", ""); -->
+<!-- gen = prompt("Enter Your Gender:", ""); -->
+<!-- comb = prompt("Enter Your Combination:", ""); -->
+a = prompt("Enter Your English Marks:", "");
+mark = new Number(a);
+<!-- b = prompt("Enter Your Mathematics Marks:", ""); -->
+<!-- mtc = new Number(b); -->
+<!-- c = prompt("Enter Your Computer Science Marks:", ""); -->
+<!-- cs = new Number(c); -->
+<!-- d = prompt("Enter Your French Marks:", ""); -->
+<!-- fr = new Number(d); -->
+<!-- e = prompt("Enter Your Music Marks:", ""); -->
+<!-- msc = new Number(e); -->
+d = new Date();
+if (mark>100){
+document.getElementById('results').innerHTML = "<h3>YOUR RESULTS:</h3>" +
+'<p class="ans">PLEASE ENTER VALID MARKS</p>';
+}
+
+else if (mark>80 && mark<=100){
+document.getElementById('results').innerHTML = "<h3>YOUR RESULTS:</h3>" + 
+"<h4>Firstname: </h4>" + '<p class="ans">' + fnam + "</p>" +
+"<h4>Lastname: </h4>" + '<p class="ans">' + lnam + "</p>" +
+"<h4>Gender: </h4>" + '<p class="ans">' + gen + "</p>"  + "<h4>Combination:</h4>" +
+'<p class="ans">' + comb + "</p>" + "<h4>Marks:</h4>" + 
+'<p class="ans">English:&nbsp;&nbsp;&nbsp;' + mark + " %</p>" + 
+'<p class="ans">Mathematics:&nbsp;&nbsp;&nbsp;' + mtc + " %</p>" +
+'<p class="ans">Computer Science:&nbsp;&nbsp;&nbsp;' + cs + "%</p>" + 
+'<p class="ans">French:&nbsp;&nbsp;&nbsp;' + fr + " %</p>" +
+'<p class="ans">Music:&nbsp;&nbsp;&nbsp;' + msc + " %</p>" +
+"<h4>Average:</h4>" + '<p class="ans">' + avg + " %</p>" +
+"<h4>Verdict of jury:</h4>" + '<p class="ans">A+</p>' +
+"<h4>Done at:</h4>" + '<p class="ans">' + d + "</p>" + 
+"<h4>School Principal:</h4>" + '<p class="ans">Dr JOHN DOE</p>' + 
+'<p class="sign">Jodoehn123</p>';
+}
+
+else if (mark>70 && mark<=80){
+document.getElementById('results').innerHTML = "<h3>YOUR RESULTS:</h3>" + 
+"<h4>Full names: </h4>" + '<p class="ans">' + nam + "</p>" +
+"<h4>Gender: </h4>" + '<p class="ans">' + gen + "</p>"  + "<h4>Combination:</h4>" +
+'<p class="ans">' + comb + "</p>" + "<h4>Marks:</h4>" + 
+'<p class="ans">English:&nbsp;&nbsp;&nbsp;' + mark + " %</p>" + 
+'<p class="ans">Mathematics:&nbsp;&nbsp;&nbsp;' + mtc + " %</p>" +
+'<p class="ans">Computer Science:&nbsp;&nbsp;&nbsp;' + cs + "%</p>" + 
+'<p class="ans">French:&nbsp;&nbsp;&nbsp;' + fr + " %</p>" +
+'<p class="ans">Music:&nbsp;&nbsp;&nbsp;' + msc + " %</p>" +
+"<h4>Average:</h4>" + '<p class="ans">' + avg + " %</p>" +
+"<h4>Verdict of jury:</h4>" + '<p class="ans">A</p>' +
+"<h4>Done at:</h4>" + '<p class="ans">' + d + "</p>" + 
+"<h4>School Principal:</h4>" + '<p class="ans">Dr JOHN DOE</p>' + 
+'<p class="sign">Jodoehn123</p>';
+}
+
+else if (mark>50 && mark<70){
+document.getElementById('results').innerHTML = "<h3>YOUR RESULTS:</h3>" + 
+"<h4>Full names: </h4>" + '<p class="ans">' + nam + "</p>" +
+"<h4>Gender: </h4>" + '<p class="ans">' + gen + "</p>"  + "<h4>Combination:</h4>" +
+'<p class="ans">' + comb + "</p>" + "<h4>Marks:</h4>" + 
+'<p class="ans">English:&nbsp;&nbsp;&nbsp;' + mark + " %</p>" + 
+'<p class="ans">Mathematics:&nbsp;&nbsp;&nbsp;' + mtc + " %</p>" +
+'<p class="ans">Computer Science:&nbsp;&nbsp;&nbsp;' + cs + "%</p>" + 
+'<p class="ans">French:&nbsp;&nbsp;&nbsp;' + fr + " %</p>" +
+'<p class="ans">Music:&nbsp;&nbsp;&nbsp;' + msc + " %</p>" +
+"<h4>Average:</h4>" + '<p class="ans">' + avg + " %</p>" +
+"<h4>Verdict of jury:</h4>" + '<p class="ans">B</p>' +
+"<h4>Done at:</h4>" + '<p class="ans">' + d + "</p>" + 
+"<h4>School Principal:</h4>" + '<p class="ans">Dr JOHN DOE</p>' + 
+'<p class="sign">Jodoehn123</p>';
+}
+
+else if (mark==50){
+document.getElementById('results').innerHTML = "<h3>YOUR RESULTS:</h3>" + 
+"<h4>Full names: </h4>" + '<p class="ans">' + nam + "</p>" +
+"<h4>Gender: </h4>" + '<p class="ans">' + gen + "</p>"  + "<h4>Combination:</h4>" +
+'<p class="ans">' + comb + "</p>" + "<h4>Marks:</h4>" + 
+'<p class="ans">English:&nbsp;&nbsp;&nbsp;' + mark + " %</p>" + 
+'<p class="ans">Mathematics:&nbsp;&nbsp;&nbsp;' + mtc + " %</p>" +
+'<p class="ans">Computer Science:&nbsp;&nbsp;&nbsp;' + cs + "%</p>" + 
+'<p class="ans">French:&nbsp;&nbsp;&nbsp;' + fr + " %</p>" +
+'<p class="ans">Music:&nbsp;&nbsp;&nbsp;' + msc + " %</p>" +
+"<h4>Average:</h4>" + '<p class="ans">' + avg + " %</p>" +
+"<h4>Verdict of jury:</h4>" + '<p class="ans">C</p>' +
+"<h4>Done at:</h4>" + '<p class="ans">' + d + "</p>" + 
+"<h4>School Principal:</h4>" + '<p class="ans">Dr JOHN DOE</p>' + 
+'<p class="sign">Jodoehn123</p>';
+}
+
+else {
+document.getElementById('results').innerHTML = "<h3>YOUR RESULTS:</h3>" + 
+"<h4>Full names: </h4>" + '<p class="ans">' + nam + "</p>" +
+"<h4>Gender: </h4>" + '<p class="ans">' + gen + "</p>"  + "<h4>Combination:</h4>" +
+'<p class="ans">' + comb + "</p>" + "<h4>Marks:</h4>" + 
+'<p class="ans">English:&nbsp;&nbsp;&nbsp;' + mark + " %</p>" + 
+'<p class="ans">Mathematics:&nbsp;&nbsp;&nbsp;' + mtc + " %</p>" +
+'<p class="ans">Computer Science:&nbsp;&nbsp;&nbsp;' + cs + "%</p>" + 
+'<p class="ans">French:&nbsp;&nbsp;&nbsp;' + fr + " %</p>" +
+'<p class="ans">Music:&nbsp;&nbsp;&nbsp;' + msc + " %</p>" +
+"<h4>Average:</h4>" + '<p class="ans">' + avg + " %</p>" +
+"<h4>Verdict of jury:</h4>" + '<p class="ans">F</p>' +
+"<h4>Done at:</h4>" + '<p class="ans">' + d + "</p>" + 
+"<h4>School Principal:</h4>" + '<p class="ans">Dr JOHN DOE</p>' + 
+'<p class="sign">Jodoehn123</p>';}
+}
+</script>
+</body>
+</html>

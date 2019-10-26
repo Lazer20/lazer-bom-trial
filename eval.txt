@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="logo.png">
+<title>Student Report System</title>
+<style>
+</style>
+</head>
